@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "sourceMap": true,
+      "outDir": "./output",
+      "baseUrl": ".",
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "target": "es2019",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "skipLibCheck": true,
+      "strictNullChecks": true,
+      "allowJs": true,
+      "paths": {
+        "$src/*": ["src/*"], 
+        "$customers/*": ["customers/*"],
+      }
+    },
+    "include": ["customers/**/*",  "entry/**/*",  "src/**/*", "*.ts"]
+  }
+  
