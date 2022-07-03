@@ -6,7 +6,7 @@ export const customImportPlugin = (custom: string) => ({
     build.onResolve({ filter: /^\$src\// }, async (args: OnResolveArgs) => {
       // 检测定制化目录下是否有可代替的模块
       const result = await build.resolve(
-        `$customers/${custom}/${args.path.replace(/^\$src\//, "")}`,
+        `$customers/${custom}/${args.path.replace(/^\$src\//, "src/")}`,
         { resolveDir: args.resolveDir }
       );
       // 报错则走import 默认行为
